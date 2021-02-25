@@ -1,0 +1,7 @@
+div p {
+  color: red;
+}
+
+h2 + p{
+  color: blueviolet;
+}

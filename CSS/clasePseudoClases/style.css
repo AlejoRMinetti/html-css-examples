@@ -1,0 +1,27 @@
+.main-nav {
+  margin-top: 10px;
+  list-style: none; /* elimina los bullets */
+  padding-left: 0;
+  background-color: #13a4a4;
+}
+.main-nav__item {
+  display: inline-block; /* ver en una sola  linea*/
+}
+.main-nav__item a {
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+/* cuando el mouse se pone sobre el elemento */
+.main-nav__item a:hover {
+  color: blue;
+}
+/* al hacer click */
+.main-nav__item a:active {
+  color: red;
+}
+/* seudo-elemento: agrega el pipe */
+.main-nav__item a::after {
+  content: " | ";
+}

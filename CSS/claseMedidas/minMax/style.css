@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* para que se renderice en toda la pantalla */
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: purple;
+}
+
+section {
+  width: 100%;
+  min-width: 320px;
+  max-width: 500px;
+  height: 850px;
+  background-color: red;
+  margin: 0 auto;
+}
+
+section p{
+  font-size: 200%;
+}
