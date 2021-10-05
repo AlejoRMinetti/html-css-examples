@@ -21,19 +21,30 @@ body {
 }
 .box1 {
   background-color: blue;
+  /* valores por default */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 .box2 {
   background-color: blueviolet;
+  /* idem box1 en una linea */
+  flex: 0 1 auto;
 }
 .box3 {
+  flex: 0 1 auto;
   background-color: burlywood;
 }
 .box4 {
+  /* Grow the most */
+  flex: 2 0 75px;
   background-color: cadetblue;
 }
 .box5 {
+  flex: 1 1 75px;
   background-color: coral;
 }
 .box6 {
+  flex: 0 1 auto;
   background-color: salmon;
 }
