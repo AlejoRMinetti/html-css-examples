@@ -26,13 +26,19 @@
       width: 20px;
       height: 20px;
       background: blue;
+      top: 40px;
       z-index: 4;
     }
     .yellow {
       width: 20px;
       height: 20px;
       background: yellow;
-      z-index: 6;
+      top: -17px;
+      z-index: 9;
+      /* este se posiciona en la parte de atras de red, 
+      por mas z-index elevado que tenga, porque es
+      el hermano del padre, teniendo mas relevancia 
+      el z-index del padre */
     }
   </style>
 </head>
@@ -41,10 +47,13 @@
   <div class="two">Plazi</div> -->
 
   <section>
+
     <div class="red">Red</div>
+
     <div class="blue">Blue
       <div class="yellow">Yellow</div>
     </div>
+
   </section>
 </body>
 </html>

@@ -11,9 +11,15 @@
       height: 20px;
       background: plum;
       padding: 20px;
+
+      /* border-box reduce el espacio central 
+      para que los 200px consideren el padding y border */
       box-sizing: border-box;
+
       border: 1px solid hotpink;
       margin: 20px;
+      /* los margin se mezclan en este ejemplo con 2 cajas 
+        Se evita mediante un padre con display: flex */
     }
   </style>
 </head>
