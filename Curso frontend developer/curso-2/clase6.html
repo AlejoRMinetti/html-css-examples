@@ -26,6 +26,7 @@
     .cards-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, 240px);
+      /* auto-fill: va llenando hasta pasar a la fila siguiente */
       gap: 26px;
       place-content: center;
     }
@@ -37,6 +38,8 @@
       height: 240px;
       border-radius: 20px;
       object-fit: cover;
+      /* no contrae o estira la imagen 
+      corta la imagen para entrar en el tamaño asignado */
     }
     .product-info {
       display: flex;

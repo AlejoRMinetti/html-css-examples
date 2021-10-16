@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>Mobile Menu</title>
   <style>
     :root {
       --white: #FFFFFF;
@@ -39,6 +39,7 @@
     }
     .mobile-menu ul:nth-child(1) {
       border-bottom: 1px solid var(--very-light-pink);
+      /* linea separadora */
     }
     .mobile-menu ul li {
       margin-bottom: 24px;
@@ -46,11 +47,21 @@
     .email {
       font-size: var(--sm);
       font-weight: 300 !important;
+      /* solo usar en estos casos estrictamente necesario */
     }
     .sign-out {
       font-size: var(--sm);
       color: var(--hospital-green) !important;
     }
+
+    /* Reto separacion final */
+    .mobile-menu ul:last-child {
+      position: absolute;
+      /* asegurar que el padre no sea static para
+      que se posicione a partir de este */
+      bottom: 4px;
+    }
+
   </style>
 </head>
 <body>
