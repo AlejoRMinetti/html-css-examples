@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Evitar valores por defectos no deseados */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* border-box: el tamaño total del elemento será igual al especificado en el width y height*/
+      }
+
+    div {
+      margin: 30px;
+      border: 10px solid hotpink;
+      padding: 20px;
+      width: 150px;
+      height: 150px;
+      background: plum;
+
+      /* tamaño total del em 210px si no se activa border-box
+      border-box reduce el espacio central 
+      para que los 150px consideren el padding y border */
+
+      /*  Puedes establecer el margin en cada posición en una sola línea de las siguientes maneras:
+      margin: [arriba] [derecha] [abajo] [izquierda], siguiendo el sentido horario.
+      margin: [arriba] [abajo] [derecha e izquierda], siguiendo el eje principal.
+      margin: [arriba y abajo] [derecha e izquierda], siguiendo los ejes del elemento.
+      */
+
+      /* los margin se mezclan en este ejemplo con 2 cajas
+        cuando sucede este colapso de margenes, se adopta el maximo de ambos 
+        Se evita mediante un padre con display: flex 
+        o usando border transparente
+        border: 10px solid transparent;
+        */
+
+    }
+    .bordecito{
+      border: blue dashed 1px;
+      border-color: blue;
+      border-style: groove;
+      border-style: dashed;
+      border-style: dotted; 
+      border-width: 6px;
+    }
+    .borderaro{
+      border-top: 3px solid blue;
+      border-bottom: 6px solid red;
+      border-left: 9px solid black;
+      border-right: 12px solid yellow;
+    }
+  </style>
+</head>
+<body>
+  <div>Platzi</div>
+  <div>Es lo máximo</div>
+  <div class="bordecito"></div>
+  <div class="borderaro"></div>
+</body>
+</html>

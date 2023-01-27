@@ -11,6 +11,7 @@
     }
     p::first-letter {
       color: teal;
+      <!-- remove ::before to see it -->
     }
     p::before {
       content: "✨";
@@ -18,11 +19,13 @@
     p::after {
       content: "💅🏼";
     }
-    p:hover {
-      color: skyblue;
-    }
     div p:nth-child(2) {
       color: violet;
+      <!-- no deja actuar al hover sin el !important (mayor especificidad) -->
+      <!-- la especificidad se suma en los electores combinadores -->
+    }
+    p:hover {
+      color: skyblue !important;
     }
     ::placeholder {
       color: tomato;

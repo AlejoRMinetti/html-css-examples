@@ -10,8 +10,12 @@
       width: 200px;
       height: 200px;
       background: peachpuff;
-      position: relative;
+      position: relative; /* respeta flujo del doc, posicion respecto al padre */
+      position: absolute; /* libre del flujo del doc, posicion relativa al padre mas cercano relative */
+      position: fixed; /* fija su posicion invariante ante al scroll */
+      position: static; /* por defecto en todos los em*/
       top: 20px;
+      left: 20px;
     }
     .item {
       width: 20px;
@@ -19,19 +23,28 @@
       background: hotpink;
       position: absolute;
       /* absolute se posiciona a partir del padre que no sea static */
-      right: 0;
+      right: 10px;
+      top: 10px;
     }
     nav {
       width: 100%;
       height: 60px;
       background: LightCyan;
-      position: fixed;
+      position: relative; /* ver efecto del absolute en container */
+      position: fixed; /* fija su posicion invariante ante al scroll */
       top: 0;
     }
     ul p {
       position: sticky;
-      /* sticky se pega lo seleccionado en la posicion asignada */
-      top: 0;
+      /* sticky se pega lo seleccionado en la posicion asignada 
+      hasta encontrar otro elemento que lo remplaza */
+      top: 10px;
+    }
+    h1{
+      position: sticky;
+      /* en este caso se bugea el numero, superponiendose */
+      top: 20px;
+      color: blueviolet;
     }
   </style>
 </head>
@@ -39,6 +52,9 @@
   <nav></nav>
   <div class="container">
     <div class="item"></div>
+  </div>
+  <div>
+    <h1>Bug 1</h1>
   </div>
   <p>What is Lorem Ipsum?
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -58,12 +74,7 @@
     <li>Sandia</li>
   </ul>
 
-  <ul>
-    <p>Frutas</p>
-    <li>Manzana</li>
-    <li>Pera</li>
-    <li>Sandia</li>
-  </ul>
+  <h1>Bug 2</h1>
 
   <ul>
     <p>Frutas</p>
@@ -86,12 +97,23 @@
     <li>Sandia</li>
   </ul>
 
+  <h1>Bug 3</h1>
+
   <ul>
     <p>Frutas</p>
     <li>Manzana</li>
     <li>Pera</li>
     <li>Sandia</li>
   </ul>
+
+  <ul>
+    <p>Frutas</p>
+    <li>Manzana</li>
+    <li>Pera</li>
+    <li>Sandia</li>
+  </ul>
+
+  <h1>Bug 4</h1>
 
     <ul>
     <p>Frutas</p>
@@ -128,6 +150,30 @@
     <li>Sandia</li>
   </ul>
 
+  <ul>
+    <p>Frutas</p>
+    <li>Manzana</li>
+    <li>Pera</li>
+    <li>Sandia</li>
+  </ul>
+  <ul>
+    <p>Frutas</p>
+    <li>Manzana</li>
+    <li>Pera</li>
+    <li>Sandia</li>
+  </ul>
+  <ul>
+    <p>Frutas</p>
+    <li>Manzana</li>
+    <li>Pera</li>
+    <li>Sandia</li>
+  </ul>
+  <ul>
+    <p>Frutas</p>
+    <li>Manzana</li>
+    <li>Pera</li>
+    <li>Sandia</li>
+  </ul>
   <ul>
     <p>Frutas</p>
     <li>Manzana</li>

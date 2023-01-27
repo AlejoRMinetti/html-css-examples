@@ -6,35 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    *{
+      background: papayawhip;
+    }
+    div, p{
+      padding: 6px;
+      background: rgb(128, 128, 255);
+    }
     div p {
       color: Lime;
+      <!-- descencientes -->
     }
     div > div {
       background: plum;
+      <!-- hijo directo -->
     }
     .es {
       background: red;
     }
     div + section {
       background: palevioletred;
+      <!-- adjacente por debajo -->
     }
     div ~ p {
-      color: powderblue;
+      color: greenyellow;
+      <!-- hermanos por debajo-->
+    }
+    div.es{
+      color: blue;
     }
   </style>
 </head>
 <body>
+  <section>
+    Empecemos...
+  </section>
+  <p>Clase de selectores</p>
   <div>
     <div>
       <p>Platzi</p>
       <div class="es">Es</div>
     </div>
   </div>
-  <p>Clase de selectores</p>
-  <p>Clase de selectores</p>
   <section>
-    Es lo mejor
+    es lo mejor
   </section>
+  <p class="es">Clase de selectores</p>
+  <p> Clase de selectores</p>
   <div>
     Master
   </div>
