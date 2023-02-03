@@ -28,6 +28,7 @@
     }
     .menu {
       display: none;
+      cursor: pointer;
     }
     .logo {
       width: 100px;
@@ -65,8 +66,14 @@
       font-size: var(--sm);
       margin-right: 12px;
     }
+    .navbar-email img{
+      margin-left: 8px;
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
     .navbar-shopping-cart {
       position: relative;
+      cursor: pointer;
     }
     .navbar-shopping-cart div {
       width: 16px;
@@ -82,7 +89,7 @@
       justify-content: center;
       align-items: center;
     }
-    @media (max-width: 640px) {
+    @media (max-width: 800px) {
       .menu {
         display: block;
       }
@@ -97,10 +104,10 @@
 </head>
 <body>
   <nav>
-    <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+    <img class="menu" src="./icons/icon_menu.svg" alt="menu" >
 
     <div class="navbar-left">
-      <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+      <img class="logo" src="./logos/logo_yard_sale.svg" alt="logo" >
 
       <ul>
         <li>
@@ -126,7 +133,9 @@
 
     <div class="navbar-right">
       <ul>
-        <li class="navbar-email">platzi@example.com</li>
+        <li class="navbar-email">platzi@example.com
+          <img src="./icons/flechita.svg" alt="">
+        </li>
         <li class="navbar-shopping-cart">
           <img src="./icons/icon_shopping_cart.svg" alt="shopping cart">
           <div>2</div>
